@@ -1,0 +1,49 @@
+### Create a new user
+
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "ade.suluh@gmail.com",
+    "password": "P@ssw0rd"
+}
+
+### login a new user
+
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "ade.suluh@gmail.com",
+    "password": "P@ssw0rd"
+}
+
+### Get the currently signed in user
+GET http://localhost:3000/auth/whoami
+
+### sign out a user
+POST http://localhost:3000/auth/signout
+
+
+### Find a particular user id
+GET http://localhost:3000/auth/2
+
+### Find all users with a given email
+GET http://localhost:3000/auth?email=ade.suluh@gmail.com
+
+### Delete particular user id
+DELETE http://localhost:3000/auth/1
+
+# ### save color cookie
+# GET http://localhost:3000/auth/colors/red
+
+# ### save color cookie
+# GET http://localhost:3000/auth/colors
+
+### Updtate particular user id
+PATCH http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+    "email": "adeade@gmail.com"
+}
