@@ -1,3 +1,4 @@
+import { AdminGuard } from './../guards/admin.guard';
 import { ReportDto } from './dtos/report.dto';
 import { ReportsService } from './reports.service';
 import { Body, Controller, Param, Patch, Post, UseGuards } from '@nestjs/common';
@@ -20,6 +21,7 @@ export class ReportsController {
     }
 
     @Patch('/:id')
+    @UseGuards(AdminGuard)
     approveReport(@Param('id') id: string, @Body() body: ApproveReportDto) {
         return this.reportService.changeApproval(id, body.approved)
     }

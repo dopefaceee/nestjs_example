@@ -1,3 +1,4 @@
+### Create Report
 POST http://localhost:3000/reports
 Content-Type: application/json
 
@@ -12,9 +13,9 @@ Content-Type: application/json
 }
 
 ### Approve an existing report
-PATCH http://localhost:3000/reports/4
+PATCH http://localhost:3000/reports/5
 Content-Type: application/json
 
 {
-    "approved": false
+    "approved": true
 }
